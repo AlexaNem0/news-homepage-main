@@ -1,54 +1,30 @@
 import React from "react";
 
-const Card = () => {
+interface CardProps {
+  style?: React.CSSProperties;
+  mainTitle: string;
+  title: string;
+  content: string;
+  imageUrl: string;
+}
+
+const Card: React.FC<CardProps> = ({ title, content, imageUrl, mainTitle }) => {
   return (
     <>
-      <div className="py-6">
-        <div className="flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden">
-          <div className="w-1/3 bg-cover bg-[url('../src/assets/images/image-retro-pcs.jpg')]"></div>
+      <div className="py-6 ">
+        <div className="flex max-w-md bg-white shadow-lg rounded overflow-hidden">
+          <div className="w-1/2 md:w-1/3">
+            <img className="h-[210px]" src={imageUrl} alt={title} />
+          </div>
           <div className="w-2/3 p-4">
-            <h1 className="text-gray-900 font-bold text-2xl">01</h1>
-            <p className="mt-2 text-gray-600 text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit In odit
-              exercitationem fuga id nam quia
-            </p>
-            <div className="flex item-center mt-2">
-              <svg
-                className="w-5 h-5 fill-current text-gray-700"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
-              </svg>
-              <svg
-                className="w-5 h-5 fill-current text-gray-700"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
-              </svg>
-              <svg
-                className="w-5 h-5 fill-current text-gray-700"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
-              </svg>
-              <svg
-                className="w-5 h-5 fill-current text-gray-500"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
-              </svg>
-              <svg
-                className="w-5 h-5 fill-current text-gray-500"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
-              </svg>
-            </div>
-            <div className="flex item-center justify-between mt-3">
-              <h1 className="text-gray-700 font-bold text-xl">$220</h1>
-              <button className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">
-                Add to Card
-              </button>
+            <h1 className="text-[#5D5F79] font-bold text-2xl md:text-3xl">
+              {mainTitle}
+            </h1>
+            <h2 className="mt-3 hover:text-[#F15E50] cursor-pointer text-xl md:text-2xl font-bold">
+              {title}
+            </h2>
+            <div className="flex item-center text-sm md:text-base mt-4 text-[#C5C6CE]">
+              <p> {content}</p>
             </div>
           </div>
         </div>
@@ -58,25 +34,3 @@ const Card = () => {
 };
 
 export default Card;
-
-// import React from 'react';
-
-// interface CardProps {
-//   title: string;
-//   content: string;
-//   imageUrl: string;
-// }
-
-// const Card: React.FC<CardProps> = ({ title, content, imageUrl }) => {
-//   return (
-//     <div className="card">
-//       <img src={imageUrl} alt={title} />
-//       <div className="card-content">
-//         <h2>{title}</h2>
-//         <p>{content}</p>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Card;
