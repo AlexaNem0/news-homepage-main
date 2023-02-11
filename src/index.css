@@ -9,4 +9,5 @@ body {
   font-family: "Inter", "Dancing script", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: hsl(36, 100%, 99%);
 }
