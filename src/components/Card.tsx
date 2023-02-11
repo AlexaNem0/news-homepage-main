@@ -12,7 +12,7 @@ const Card: React.FC<CardProps> = ({ title, content, imageUrl, mainTitle }) => {
   return (
     <>
       <div className="py-6 ">
-        <div className="flex max-w-md bg-white shadow-lg rounded overflow-hidden">
+        <div className="flex max-w-md bg-white shadow-lg rounded overflow-hidden transform hover:scale-105 transition duration-500">
           <div className="w-1/2 md:w-1/3">
             <img className="h-[210px]" src={imageUrl} alt={title} />
           </div>

@@ -6,7 +6,11 @@ const Navbar: React.FC = () => {
   return (
     <div className=" max-w-7xl m-auto flex items-center justify-between flex-wrap px-6 py-5">
       <a href="#hero">
-        <img src={Logo} alt="" />
+        <img
+          className="transform hover:scale-105 md:hover:scale-125 transition duration-500"
+          src={Logo}
+          alt=""
+        />
       </a>
       <div className="block lg:hidden">
         <button
@@ -26,35 +30,35 @@ const Navbar: React.FC = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } w-full h-screen  lg:h-3 lg:mx-auto block flex-grow lg:flex lg:justify-end lg:w-auto`}
+        } w-full h-screen  lg:h-3 lg:mx-auto block flex-grow lg:flex lg:justify-end lg:w-auto ml-3`}
       >
         <a
           href="/"
-          className="block mt-4 lg:inline-block lg:mt-0 hover:text-[#E9AB53] mr-4"
+          className="block mt-4 lg:inline-block lg:mt-0 hover:text-[#E9AB53] mr-4 transform hover:scale-105 lg:hover:scale-125 transition duration-500"
         >
           Home
         </a>
         <a
           href="/"
-          className="block mt-4 lg:inline-block lg:mt-0 hover:text-[#E9AB53] mr-4"
+          className="block mt-4 lg:inline-block lg:mt-0 hover:text-[#E9AB53] mr-4 transform hover:scale-105 lg:hover:scale-125 transition duration-500"
         >
           New
         </a>
         <a
           href="/"
-          className="block mt-4 lg:inline-block lg:mt-0 hover:text-[#E9AB53] mr-4"
+          className="block mt-4 lg:inline-block lg:mt-0 hover:text-[#E9AB53] mr-4 transform hover:scale-105 lg:hover:scale-125 transition duration-500"
         >
           Popular
         </a>
         <a
           href="/"
-          className="block mt-4 lg:inline-block lg:mt-0 hover:text-[#E9AB53] mr-4"
+          className="block mt-4 lg:inline-block lg:mt-0 hover:text-[#E9AB53] mr-4 transform hover:scale-105 lg:hover:scale-125 transition duration-500"
         >
           Trending
         </a>
         <a
           href="/"
-          className="block mt-4 lg:inline-block lg:mt-0 hover:text-[#E9AB53] mr-4"
+          className="block mt-4 lg:inline-block lg:mt-0 hover:text-[#E9AB53] mr-4 transform hover:scale-105 lg:hover:scale-125 transition duration-500"
         >
           Categories
         </a>
